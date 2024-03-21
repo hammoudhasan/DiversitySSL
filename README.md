@@ -17,7 +17,7 @@
   
 <img src="https://i.ibb.co/PtxXHqc/ssl-teaser.jpg" alt="SynthCLIP Teaser" width="500"> <!-- Sets the width to 500 pixels -->
 
-[![Paper](https://img.shields.io/badge/arXiv-Paper-red?style=for-the-badge&logo=arxiv)](www.google.com) 
+[![Paper](https://img.shields.io/badge/arXiv-Paper-red?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2403.13808) 
 [![GitHub stars](https://img.shields.io/github/stars/hammoudhasan/DiversitySSL?style=for-the-badge)](https://github.com/hammoudhasan/DiversitySSL/stargazers)
 </div>
 
