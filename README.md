@@ -34,5 +34,8 @@ If you find this work useful in your research, please consider citing:
       title={On Pretraining Data Diversity for Self-Supervised Learning}, 
       author={Hasan Abed Al Kader Hammoud and Tuhin Das and Fabio Pizzati and Philip Torr and Adel Bibi and Bernard Ghanem},
       year={2024},
+      eprint={2403.13808},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
