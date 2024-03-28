@@ -1,5 +1,6 @@
 # On Pretraining Data Diversity for Self-Supervised Learning
 
+Code and models will be released upon acceptance.
 
 <div align="center">
   
