@@ -1,9 +1,9 @@
 # On Pretraining Data Diversity for Self-Supervised Learning
 
-Code and models will be released upon acceptance.
 
 <div align="center">
-  
+  Code and models will be released upon acceptance.
+
 <div>
   <a href="https://scholar.google.com/citations?user=Plf1JSIAAAAJ&hl=en">Hasan Abed Al Kader Hammoud</a><sup>1*</sup>&nbsp;&nbsp;
   <a href="https://fr.linkedin.com/in/das-tuhin">Tuhin Das</a><sup>2*</sup>&nbsp;&nbsp;
