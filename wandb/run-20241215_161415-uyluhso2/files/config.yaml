@@ -1,0 +1,233 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.11
+    cli_version: 0.16.2
+    framework: huggingface
+    huggingface_version: 4.46.3
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1734268455.932211
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 71
+      - 105
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 71
+      - 105
+      3:
+      - 1
+      - 7
+      - 13
+      - 23
+      4: 3.10.11
+      5: 0.16.2
+      6: 4.46.3
+      8:
+      - 5
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+name:
+  desc: null
+  value: pre-simclr-vit-B-csv-1.0
+method:
+  desc: null
+  value: simclr
+backbone:
+  desc: null
+  value:
+    name: vit_base
+    kwargs: {}
+method_kwargs:
+  desc: null
+  value:
+    proj_hidden_dim: 4096
+    proj_output_dim: 256
+    pred_hidden_dim: 4096
+    temperature: 0.2
+data:
+  desc: null
+  value:
+    dataset: custom
+    train_path: /home/hammh0a/new/solo-learn/image_paths.csv
+    format: csv
+    num_workers: 8
+    no_labels: true
+    fraction: 1.0
+    root_dir: ./
+    path_column: path
+    val_path: null
+    num_classes: 1
+    num_large_crops: 2
+    num_small_crops: 0
+optimizer:
+  desc: null
+  value:
+    name: adamw
+    batch_size: 32
+    lr: 0.00025
+    classifier_lr: 0.3
+    weight_decay: 0.05
+    kwargs:
+      betas:
+      - 0.9
+      - 0.999
+    exclude_bias_n_norm_wd: false
+scheduler:
+  desc: null
+  value:
+    name: warmup_cosine
+    scheduler_interval: step
+    warmup_epochs: 1
+    lr_decay_steps: null
+    min_lr: 0.0
+    warmup_start_lr: 3.0e-05
+    interval: step
+checkpoint:
+  desc: null
+  value:
+    enabled: true
+    dir: trained_models
+    frequency: 1
+    keep_prev: false
+max_epochs:
+  desc: null
+  value: 10
+devices:
+  desc: null
+  value:
+  - 0
+sync_batchnorm:
+  desc: null
+  value: true
+accelerator:
+  desc: null
+  value: gpu
+strategy:
+  desc: null
+  value: auto
+benchmark:
+  desc: null
+  value: true
+accumulate_grad_batches:
+  desc: null
+  value: 2
+seed:
+  desc: null
+  value: 0
+augmentations:
+  desc: null
+  value:
+  - rrc:
+      enabled: true
+      crop_min_scale: 0.08
+      crop_max_scale: 1.0
+    color_jitter:
+      prob: 0.8
+      brightness: 0.4
+      contrast: 0.4
+      saturation: 0.2
+      hue: 0.1
+    grayscale:
+      prob: 0.2
+    gaussian_blur:
+      prob: 1.0
+    solarization:
+      prob: 0.0
+    equalization:
+      prob: 0.0
+    horizontal_flip:
+      prob: 0.5
+    crop_size: 224
+    num_crops: 1
+  - rrc:
+      enabled: true
+      crop_min_scale: 0.08
+      crop_max_scale: 1.0
+    color_jitter:
+      prob: 0.8
+      brightness: 0.4
+      contrast: 0.4
+      saturation: 0.2
+      hue: 0.1
+    grayscale:
+      prob: 0.2
+    gaussian_blur:
+      prob: 0.1
+    solarization:
+      prob: 0.2
+    equalization:
+      prob: 0.0
+    horizontal_flip:
+      prob: 0.5
+    crop_size: 224
+    num_crops: 1
+wandb:
+  desc: null
+  value:
+    enabled: true
+    entity: null
+    project: solo-learn
+    offline: false
+auto_resume:
+  desc: null
+  value:
+    enabled: false
+    max_hours: 36
+dali:
+  desc: null
+  value:
+    device: gpu
+    encode_indexes_into_labels: false
+auto_umap:
+  desc: null
+  value:
+    enabled: false
+    dir: auto_umap
+    frequency: 1
+debug_augmentations:
+  desc: null
+  value: false
+resume_from_checkpoint:
+  desc: null
+  value: null
+num_nodes:
+  desc: null
+  value: 1
+knn_eval:
+  desc: null
+  value:
+    enabled: false
+    k: 20
+    distance_func: euclidean
+performance:
+  desc: null
+  value:
+    disable_channel_last: false

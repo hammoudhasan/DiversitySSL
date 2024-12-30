@@ -1,0 +1,9 @@
+[34m[1mwandb[39m[22m: logging graph, to disable use `wandb.watch(log_graph=False)`
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/configuration_validator.py:74: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/utilities/data.py:104: Total length of `DataLoader` across ranks is zero. Please make sure this was your intention.
+Exception ignored in: <function _releaseLock at 0x153ff06c9f30>
+Traceback (most recent call last):
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/logging/__init__.py", line 228, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/utilities/data.py:104: Total length of `CombinedLoader` across ranks is zero. Please make sure this was your intention.

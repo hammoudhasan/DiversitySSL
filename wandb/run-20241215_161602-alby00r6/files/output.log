@@ -1,0 +1,38 @@
+[34m[1mwandb[39m[22m: logging graph, to disable use `wandb.watch(log_graph=False)`
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/configuration_validator.py:74: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py:293: The number of training batches (16) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 7:  25%|██████████████████████████████████████████████████████▎                                                                                                                                                                  | 4/16 [00:02<00:07,  1.66it/s, v_num=00r6]
+
+Epoch 7:  31%|███████████████████████████████████████████████████████████████████▊                                                                                                                                                     | 5/16 [00:02<00:06,  1.80it/s, v_num=00r6]

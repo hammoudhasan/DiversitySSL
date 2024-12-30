@@ -1,0 +1,71 @@
+[34m[1mwandb[39m[22m: logging graph, to disable use `wandb.watch(log_graph=False)`
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/configuration_validator.py:74: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py:293: The number of training batches (16) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/home/hammh0a/new/solo-learn/main_pretrain.py", line 234, in main
+    trainer.fit(model, train_loader, val_loader, ckpt_path=ckpt_path)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 989, in _run
+    results = self._run_stage()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1035, in _run_stage
+    self.fit_loop.run()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 202, in run
+    self.advance()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 359, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 136, in run
+    self.advance(data_fetcher)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 202, in advance
+    batch, _, __ = next(data_fetcher)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fetchers.py", line 127, in __next__
+    batch = super().__next__()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/loops/fetchers.py", line 56, in __next__
+    batch = next(self.iterator)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 326, in __next__
+    out = next(self._iterator)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 74, in __next__
+    out[i] = next(self.iterators[i])
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/_utils.py", line 722, in reraise
+    raise exception
+KeyError: Caught KeyError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'path'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/hammh0a/new/solo-learn/solo/data/pretrain_dataloader.py", line 110, in __getitem__
+    data = super().__getitem__(index)
+  File "/home/hammh0a/new/solo-learn/solo/data/pretrain_dataloader.py", line 75, in __getitem__
+    img_path = self.df.iloc[idx][self.path_column]
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'path'
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Epoch 0:   0%|                                                                                                                                                                                                                                             | 0/16 [00:00<?, ?it/s]

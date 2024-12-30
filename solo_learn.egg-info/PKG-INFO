@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: solo-learn
+Version: 1.0.6
+Home-page: https://github.com/vturrisi/solo-learn
+Author: solo-learn development team
+Author-email: vturrisi@gmail.com, enrico.fini@gmail.com
+License: MIT
+Keywords: artificial intelligence,deep learning,unsupervised learning,contrastive learning
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: dali
+Provides-Extra: umap
+Provides-Extra: h5
+License-File: LICENSE

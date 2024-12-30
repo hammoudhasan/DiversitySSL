@@ -1,0 +1,15 @@
+[34m[1mwandb[39m[22m: logging graph, to disable use `wandb.watch(log_graph=False)`
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/home/hammh0a/new/solo-learn/main_pretrain.py", line 229, in main
+    trainer = Trainer(**trainer_kwargs)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 401, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/accelerator_connector.py", line 139, in __init__
+    self._check_config_and_set_final_flags(
+  File "/home/hammh0a/anaconda3/envs/general/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/accelerator_connector.py", line 208, in _check_config_and_set_final_flags
+    raise ValueError(
+ValueError: You selected an invalid strategy name: `strategy=None`. It must be either a string or an instance of `lightning.pytorch.strategies.Strategy`. Example choices: auto, ddp, ddp_spawn, deepspeed, ... Find a complete list of options in our documentation at https://lightning.ai
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
